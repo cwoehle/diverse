@@ -6,6 +6,7 @@
 #By uncommenting it can be used with formatdb to build new database
 #if a folder is given all subfolder are searched for fasta files and used
 # it also replaces "U" and "u" by "X" and removes stop codons at the end.(small bug that is is sorted before "U"s are replaced, but because its mainly sorted by length and the amount of Us is very small, this shoulnt be a problem(additionallys the sorting is realy unimportant))
+
 #
 use strict;								#get data from conf file
 use Getopt::Long;							#Activates commadnlin options
