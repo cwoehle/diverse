@@ -7,22 +7,27 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		AA7398CA1CD0FD4200CCBE04 /* test.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = test.pl; sourceTree = "<group>"; };
-		AA7398CB1CD0FDB100CCBE04 /* test2.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = test2.pl; sourceTree = "<group>"; };
-		AA7398D21CD0FE0400CCBE04 /* katze.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = katze.sh; sourceTree = "<group>"; };
 		AA7398D41CD1012C00CCBE04 /* fdr.R */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; path = fdr.R; sourceTree = "<group>"; };
 		AA7398D51CD1012C00CCBE04 /* fisher.R */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; path = fisher.R; sourceTree = "<group>"; };
 		AA7398D61CD1012C00CCBE04 /* fisher.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = fisher.sh; sourceTree = "<group>"; };
+		AA7398E31CD1070B00CCBE04 /* combine.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = combine.pl; sourceTree = "<group>"; };
+		AA7398E41CD1070B00CCBE04 /* entrez_gi.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = entrez_gi.pl; sourceTree = "<group>"; };
+		AA7398E51CD1070B00CCBE04 /* infoseq.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = infoseq.pl; sourceTree = "<group>"; };
+		AA7398E61CD1070B00CCBE04 /* randorder.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = randorder.pl; sourceTree = "<group>"; };
+		AA7398E71CD1070B00CCBE04 /* randseq.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = randseq.pl; sourceTree = "<group>"; };
+		AA7398E81CD1070B00CCBE04 /* remove_seq.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = remove_seq.pl; sourceTree = "<group>"; };
+		AA7398E91CD1070B00CCBE04 /* svg_circles.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = svg_circles.pl; sourceTree = "<group>"; };
+		AA7398EA1CD1070B00CCBE04 /* translate.pm */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = translate.pm; sourceTree = "<group>"; };
+		AA7398EC1CD107CA00CCBE04 /* database.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = database.pl; sourceTree = "<group>"; };
+		AA7398ED1CD107CA00CCBE04 /* guidancer.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = guidancer.pl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		AA7398C31CD0F44100CCBE04 = {
 			isa = PBXGroup;
 			children = (
-				AA7398CA1CD0FD4200CCBE04 /* test.pl */,
-				AA7398CB1CD0FDB100CCBE04 /* test2.pl */,
-				AA7398D21CD0FE0400CCBE04 /* katze.sh */,
-				AA7398D31CD1011400CCBE04 /* fisher */,
+				AA7398EE1CD107D200CCBE04 /* phylogenomics */,
+				AA7398EB1CD1071200CCBE04 /* diverse */,
 			);
 			sourceTree = "<group>";
 		};
@@ -34,6 +39,31 @@
 				AA7398D61CD1012C00CCBE04 /* fisher.sh */,
 			);
 			name = fisher;
+			sourceTree = "<group>";
+		};
+		AA7398EB1CD1071200CCBE04 /* diverse */ = {
+			isa = PBXGroup;
+			children = (
+				AA7398D31CD1011400CCBE04 /* fisher */,
+				AA7398E31CD1070B00CCBE04 /* combine.pl */,
+				AA7398E41CD1070B00CCBE04 /* entrez_gi.pl */,
+				AA7398E51CD1070B00CCBE04 /* infoseq.pl */,
+				AA7398E61CD1070B00CCBE04 /* randorder.pl */,
+				AA7398E71CD1070B00CCBE04 /* randseq.pl */,
+				AA7398E81CD1070B00CCBE04 /* remove_seq.pl */,
+				AA7398E91CD1070B00CCBE04 /* svg_circles.pl */,
+				AA7398EA1CD1070B00CCBE04 /* translate.pm */,
+			);
+			name = diverse;
+			sourceTree = "<group>";
+		};
+		AA7398EE1CD107D200CCBE04 /* phylogenomics */ = {
+			isa = PBXGroup;
+			children = (
+				AA7398EC1CD107CA00CCBE04 /* database.pl */,
+				AA7398ED1CD107CA00CCBE04 /* guidancer.pl */,
+			);
+			name = phylogenomics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -1,3 +1,6 @@
+#fisher R module for fisher.sh
+
+
 args=(commandArgs(TRUE))
   for(i in 1:length(args)){
       eval(parse(text=args[[i]]));
