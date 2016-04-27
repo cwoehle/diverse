@@ -6,10 +6,19 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXFileReference section */
+		AA7398CA1CD0FD4200CCBE04 /* test.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = test.pl; sourceTree = "<group>"; };
+		AA7398CB1CD0FDB100CCBE04 /* test2.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = test2.pl; sourceTree = "<group>"; };
+		AA7398D21CD0FE0400CCBE04 /* katze.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = katze.sh; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
 /* Begin PBXGroup section */
 		AA7398C31CD0F44100CCBE04 = {
 			isa = PBXGroup;
 			children = (
+				AA7398CA1CD0FD4200CCBE04 /* test.pl */,
+				AA7398CB1CD0FDB100CCBE04 /* test2.pl */,
+				AA7398D21CD0FE0400CCBE04 /* katze.sh */,
 			);
 			sourceTree = "<group>";
 		};
