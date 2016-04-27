@@ -18,15 +18,15 @@
 		AA7398E81CD1070B00CCBE04 /* remove_seq.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = remove_seq.pl; sourceTree = "<group>"; };
 		AA7398E91CD1070B00CCBE04 /* svg_circles.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = svg_circles.pl; sourceTree = "<group>"; };
 		AA7398EA1CD1070B00CCBE04 /* translate.pm */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = translate.pm; sourceTree = "<group>"; };
-		AA7398EC1CD107CA00CCBE04 /* database.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = database.pl; sourceTree = "<group>"; };
-		AA7398ED1CD107CA00CCBE04 /* guidancer.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = guidancer.pl; sourceTree = "<group>"; };
+		AA7398FF1CD109D300CCBE04 /* database.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = database.pl; sourceTree = "<group>"; };
+		AA7399001CD109D300CCBE04 /* guidancer.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = guidancer.pl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		AA7398C31CD0F44100CCBE04 = {
 			isa = PBXGroup;
 			children = (
-				AA7398EE1CD107D200CCBE04 /* phylogenomics */,
+				AA7398FE1CD109BB00CCBE04 /* phylogenomics */,
 				AA7398EB1CD1071200CCBE04 /* diverse */,
 			);
 			sourceTree = "<group>";
@@ -57,13 +57,14 @@
 			name = diverse;
 			sourceTree = "<group>";
 		};
-		AA7398EE1CD107D200CCBE04 /* phylogenomics */ = {
+		AA7398FE1CD109BB00CCBE04 /* phylogenomics */ = {
 			isa = PBXGroup;
 			children = (
-				AA7398EC1CD107CA00CCBE04 /* database.pl */,
-				AA7398ED1CD107CA00CCBE04 /* guidancer.pl */,
+				AA7398FF1CD109D300CCBE04 /* database.pl */,
+				AA7399001CD109D300CCBE04 /* guidancer.pl */,
 			);
 			name = phylogenomics;
+			path = phylogenomics/..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
