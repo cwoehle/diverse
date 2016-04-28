@@ -175,3 +175,85 @@ if s.endswith("ome!"):
 # Split the string into three separate strings,
 # each containing only a word
 print "Split the words of the string: %s" % s.split(" ")
+
+
+####boolean operations
+# change this code
+print "\n###boolean operations\n"
+
+number = 20
+second_number = 0
+first_array = [1,3,3]
+second_array = [1,2]
+
+if number > 15:
+    print "1"
+
+if first_array:
+    print "2"
+
+if len(second_array) == 2:
+    print "3"
+
+if len(first_array) + len(second_array) == 5:
+    print "4"
+
+if first_array and first_array[0] == 1:
+    print "5"
+
+if not second_number:
+    print "6"
+
+
+
+##loop
+
+print "\n###loop operations\n"
+
+numbers = [
+           951, 402, 984, 651, 360, 69, 408, 319, 601, 485, 980, 507, 725, 547, 544,
+           615, 83, 165, 141, 501, 263, 617, 865, 575, 219, 390, 984, 592, 236, 105, 942, 941,
+           386, 462, 47, 418, 907, 344, 236, 375, 823, 566, 597, 978, 328, 615, 953, 345,
+           399, 162, 758, 219, 918, 237, 412, 566, 826, 248, 866, 950, 626, 949, 687, 217,
+           815, 67, 104, 58, 512, 24, 892, 894, 767, 553, 81, 379, 843, 831, 445, 742, 717,
+           958, 609, 842, 451, 688, 753, 854, 685, 93, 857, 440, 380, 126, 721, 328, 753, 470,
+           743, 527
+           ]
+
+
+for x in numbers:
+    if x % 2 == 0:
+        print x
+    if x==237:
+        break
+
+
+
+###pattern match #skipped to this step
+
+print "\n###pattern match\n"
+
+# Example:
+import re
+pattern = r"[^\{\}\?]+@.*..*" # Your pattern here!
+# Doesn't return anything.
+# End Example
+
+# Exercise: make a regular expression that will match an email
+def test_email(your_pattern):
+    pattern = re.compile(your_pattern)
+    emails = ["john@example.com", "python-list@python.org", "wha.t.`1an?ug{}ly@email.com"]
+    for email in emails:
+        if not re.match(pattern, email):
+            print "You failed to match %s" % (email)
+        elif not your_pattern:
+            print "Forgot to enter a pattern!"
+        else:
+            print "Pass"
+
+test_email(pattern)
+
+
+
+
+#####Stopped here: http://www.learnpython.org/en/Functions
