@@ -331,3 +331,11 @@ if "Jake" in phonebook:
     print("Jake is listed in the phonebook.")
 if "Jill" not in phonebook:
     print("Jill is not listed in the phonebook.")
+
+
+#http://www.learnpython.org/en/Modules_and_Packages
+
+
+
+###other
+#python -c 'for ln in __import__("fileinput").input(): print ln.rstrip()'

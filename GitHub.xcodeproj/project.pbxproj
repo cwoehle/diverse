@@ -20,13 +20,19 @@
 		AA7398EA1CD1070B00CCBE04 /* translate.pm */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = translate.pm; sourceTree = "<group>"; };
 		AA7398FF1CD109D300CCBE04 /* database.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = database.pl; sourceTree = "<group>"; };
 		AA7399001CD109D300CCBE04 /* guidancer.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = guidancer.pl; sourceTree = "<group>"; };
+		AA9BD8171CEDAA5B003F11B9 /* best_ghostz.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = best_ghostz.pl; sourceTree = "<group>"; };
+		AA9BD8181CEDAA5B003F11B9 /* fastqc_cw.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = fastqc_cw.pl; sourceTree = "<group>"; };
 		AAF7B67C1CD1F31C005EF475 /* test.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = test.py; sourceTree = "<group>"; };
+		AAF7B67D1CD23DAF005EF475 /* prok_nn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = prok_nn.m; sourceTree = "<group>"; };
+		AAF7B67F1CD24599005EF475 /* prok_nn_rnd.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = prok_nn_rnd.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		AA7398C31CD0F44100CCBE04 = {
 			isa = PBXGroup;
 			children = (
+				AA9BD8191CEDAA60003F11B9 /* NGS */,
+				AAF7B67E1CD23DB3005EF475 /* matlab */,
 				AAF7B67C1CD1F31C005EF475 /* test.py */,
 				AA7398FE1CD109BB00CCBE04 /* phylogenomics */,
 				AA7398EB1CD1071200CCBE04 /* diverse */,
@@ -67,6 +73,24 @@
 			);
 			name = phylogenomics;
 			path = phylogenomics/..;
+			sourceTree = "<group>";
+		};
+		AA9BD8191CEDAA60003F11B9 /* NGS */ = {
+			isa = PBXGroup;
+			children = (
+				AA9BD8171CEDAA5B003F11B9 /* best_ghostz.pl */,
+				AA9BD8181CEDAA5B003F11B9 /* fastqc_cw.pl */,
+			);
+			name = NGS;
+			sourceTree = "<group>";
+		};
+		AAF7B67E1CD23DB3005EF475 /* matlab */ = {
+			isa = PBXGroup;
+			children = (
+				AAF7B67F1CD24599005EF475 /* prok_nn_rnd.m */,
+				AAF7B67D1CD23DAF005EF475 /* prok_nn.m */,
+			);
+			name = matlab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
