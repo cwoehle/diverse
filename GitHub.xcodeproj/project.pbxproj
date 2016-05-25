@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		AA3DCCCA1CF5B0E20094D880 /* blast */ = {isa = PBXFileReference; lastKnownFileType = text; path = blast; sourceTree = "<group>"; };
 		AA7398D41CD1012C00CCBE04 /* fdr.R */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; path = fdr.R; sourceTree = "<group>"; };
 		AA7398D51CD1012C00CCBE04 /* fisher.R */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; path = fisher.R; sourceTree = "<group>"; };
 		AA7398D61CD1012C00CCBE04 /* fisher.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = fisher.sh; sourceTree = "<group>"; };
@@ -52,6 +53,7 @@
 		AA7398EB1CD1071200CCBE04 /* diverse */ = {
 			isa = PBXGroup;
 			children = (
+				AA3DCCCA1CF5B0E20094D880 /* blast */,
 				AA7398D31CD1011400CCBE04 /* fisher */,
 				AA7398E31CD1070B00CCBE04 /* combine.pl */,
 				AA7398E41CD1070B00CCBE04 /* entrez_gi.pl */,
