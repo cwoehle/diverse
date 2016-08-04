@@ -3,7 +3,7 @@
 #Usage blast queryfile databasefile for blastp
 # OR blast blasttype queryfile databasefile
 
-tools="blastp"
+tool="blastp"
 q=$1
 db=$2
 
@@ -13,6 +13,6 @@ tool=$1
 q=$2
 db=$3
 
-done
+fi
 
 $tool -query $q -db $db -evalue 1e-5 -outfmt "6 qseqid sseqid pident qcovs evalue"

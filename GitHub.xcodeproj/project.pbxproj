@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		AA034EE21D534FB4003C66CE /* fastqcV2.pl */ = {isa = PBXFileReference; lastKnownFileType = text.script.perl; path = fastqcV2.pl; sourceTree = "<group>"; };
 		AA3DCCCA1CF5B0E20094D880 /* blast */ = {isa = PBXFileReference; lastKnownFileType = text; path = blast; sourceTree = "<group>"; };
 		AA7398D41CD1012C00CCBE04 /* fdr.R */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; path = fdr.R; sourceTree = "<group>"; };
 		AA7398D51CD1012C00CCBE04 /* fisher.R */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.rez; path = fisher.R; sourceTree = "<group>"; };
@@ -82,6 +83,7 @@
 			children = (
 				AA9BD8171CEDAA5B003F11B9 /* best_ghostz.pl */,
 				AA9BD8181CEDAA5B003F11B9 /* fastqc_cw.pl */,
+				AA034EE21D534FB4003C66CE /* fastqcV2.pl */,
 			);
 			name = NGS;
 			sourceTree = "<group>";
