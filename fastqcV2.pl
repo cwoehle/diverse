@@ -25,8 +25,9 @@ use Getopt::Long;
 
 my $thumbscript = "$FindBin::Bin/thumbs.sh";
 
-#fastqc executable
-my $fastqc="/usr/local/bioinf/FastQC_v0.11.5/fastqc";
+#fastqc executable Version has to be >=0.11.4
+#my $fastqc="/usr/local/bioinf/FastQC_v0.11.5/fastqc";
+my $fastqc="fastqc";
 #cpus for fastqc
 my $cpu="25";
 #fruther fastqc options
