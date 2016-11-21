@@ -18,6 +18,8 @@ use warnings;
 #subroutine now inlcuded in script
 #use translate;
 
+my $outtype=1; #alternative output format ( 1 or 2)
+
 my $vcf=$ARGV[0];
 if(!$ARGV[0]){
         print STDERR "You have to give a VCF-file!!!\n";
@@ -370,12 +372,11 @@ open(FILE,'bedtools intersect -a '.$vcf.' -b '.$gff.' -loj |');
 close(FILE);
 
 #alternative output format
-my $outtype=2;
 my @sort=();
 @sort=sort { $chrom{$b} cmp $chrom{$a} or $pos{$a} <=> $pos{$b} or $sample{$a} cmp $sample{$b} or $a cmp $b} keys %h;
 		
 		if($outtype==1){
-
+			print "\#CHROM\tPOS\tID\tREF\tALT\tQUAL\tFILTER\tINFO\tFEATURE_TYPES\tFEATURE_NAMES\tAA_CODING\n";
 			foreach(@sort){
 				if($cds{$_}){
 					print "$_\t$h{$_}\t$y{$_}\t$cds{$_}\n"
@@ -391,7 +392,7 @@ my @sort=();
 			my %prop;
 			my $c;
 			my %count;
-			my $min=0.5;
+			my $min=0;
 			my %minprop;
 			foreach(@sort){
 				my @a=(); 
@@ -423,6 +424,7 @@ my @sort=();
 
 
 			}
+			print "\#CHROM\tPOS\tREF\tALT\tSAMPLE_COUNT\tSAMPLE\tAF\tFEATURE_TYPE\tFEATURE_NAME\tAA_CODING\n";
 			foreach(@order){
 				if($minprop{$_}){
 					print "$_\t$count{$_}\t$cond{$_}\t$prop{$_}\t$tail{$_}\n";
