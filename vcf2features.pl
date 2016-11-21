@@ -69,7 +69,7 @@ open(FILE,$fasta);
 	};
 close(FILE);
 
-my %h; my %y;my %cds; my %chrom; my %pos; my $pseudo; my %semi;
+my %h; my %y;my %cds; my %chrom; my %pos;my %sample; my $pseudo; my %semi;
 open(FILE,'bedtools intersect -a '.$vcf.' -b '.$gff.' -loj |');
         while(<FILE>){
 #		print "$_";
@@ -84,6 +84,11 @@ open(FILE,'bedtools intersect -a '.$vcf.' -b '.$gff.' -loj |');
 		};
 		$chrom{$c}=$col[0];
 		$pos{$c}=$col[1];
+		my @d=();
+		@d=split("\;",$col[7]);
+		$d[$#d]=~s/Sample\=//;
+		$sample{$c}=$d[$#d];
+
 		unless($h{$c}){
 			$semi{$c}="";
 		}else{
@@ -363,8 +368,14 @@ open(FILE,'bedtools intersect -a '.$vcf.' -b '.$gff.' -loj |');
 		}
 	}
 close(FILE);
-			my @sort=();
-			@sort=sort { $chrom{$b} cmp $chrom{$a} or $pos{$a} <=> $pos{$b} or $a cmp $b} keys %h;
+
+#alternative output format
+my $outtype=2;
+my @sort=();
+@sort=sort { $chrom{$b} cmp $chrom{$a} or $pos{$a} <=> $pos{$b} or $sample{$a} cmp $sample{$b} or $a cmp $b} keys %h;
+		
+		if($outtype==1){
+
 			foreach(@sort){
 				if($cds{$_}){
 					print "$_\t$h{$_}\t$y{$_}\t$cds{$_}\n"
@@ -372,7 +383,52 @@ close(FILE);
 					print "$_\t$h{$_}\t$y{$_}\t-\n"
 				}
 			}
+		}
+		elsif($outtype==2){
+			my @order=();
+			my %tail;
+			my %cond;
+			my %prop;
+			my $c;
+			my %count;
+			my $min=0.5;
+			my %minprop;
+			foreach(@sort){
+				my @a=(); 
+				@a=split(/[\t\;]+/,$_);
+				$c="$a[0]\t$a[1]\t$a[3]\t$a[4]";
+				$a[$#a]=~s/Sample\=//;
+				$a[8]=~s/AF\=//;
+				unless($tail{$c}){
+					if($cds{$_}){
+						$tail{$c}="$h{$_}\t$y{$_}\t$cds{$_}"
+					}else{
+						$tail{$c}="$h{$_}\t$y{$_}\t-"
+					}
+					$prop{$c}=$a[8];
+					if($a[8]>=$min){
+						$minprop{$c}=1;
+					}
+					$cond{$c}=$a[$#a];
+					$count{$c}=1;
+					push(@order,$c);
+				}else{
+					$prop{$c}.=";".$a[8];
+					if($a[8]>=$min){
+						$minprop{$c}=1;
+					}
+					$cond{$c}.=";".$a[$#a];
+					$count{$c}++;
+				}
 
+
+			}
+			foreach(@order){
+				if($minprop{$_}){
+					print "$_\t$count{$_}\t$cond{$_}\t$prop{$_}\t$tail{$_}\n";
+				}
+			}
+		}
 
 
 sub translate {
