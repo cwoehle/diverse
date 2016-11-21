@@ -27,7 +27,7 @@ if(!$ARGV[0]){
 
 #In case of judith vcf txt file convert to vcf.
 if($ARGV[0]=~m/\.txt$/){
-	print "Converting Judith's txt-file $ARGV[0] to vcf $ARGV[0].vcf\n";
+	print STDERR "Converting Judith's txt-file $ARGV[0] to vcf $ARGV[0].vcf\n";
 	open(IN,$ARGV[0]);	
 	open(OUT,">".$ARGV[0].".vcf");
 		while(<IN>){
