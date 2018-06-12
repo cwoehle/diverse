@@ -44,14 +44,22 @@ if($ARGV[0]=~m/\.txt$/){
 }
 
 
-my $gff="/home/judith/experimental_evolution_sequencing/reference/NC_000913_3_art3.gff";
+my $gff;
 if($ARGV[1]){
 	$gff=$ARGV[1];
+}else{
+	print STDERR "You have to give a GFF-file!!!\n";
+	print STDERR 'Usage: '.$0.' file.vcf [file.gff] [file.fa]'."\n";
+	exit;
 }
 
-my $fasta="/home/judith/experimental_evolution_sequencing/reference/index/MG1655_V3_art3_pLC_contig.fa";
+my $fasta;
 if($ARGV[2]){
         $fasta=$ARGV[2];
+}else{
+	print STDERR "You have to give a FASTA-file!!!\n";
+	print STDERR 'Usage: '.$0.' file.vcf [file.gff] [file.fa]'."\n";
+	exit;
 }
 print STDERR "$0\t Mapping of variants to genomic features\n";
 print STDERR "Using following files:\nVCF: $vcf\nGFF: $gff\nFASTA: $fasta\n\n";
